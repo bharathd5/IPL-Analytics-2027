@@ -1,0 +1,24 @@
+{
+  "bat_need": {
+    "Powerplay": 1.0547292278627078e-08,
+    "Middle": 0.4323101807379664,
+    "Death": 0.5676898087147413
+  },
+  "bowl_need": {
+    "Powerplay": 0.4884203612861312,
+    "Middle": 8.340298375217514e-08,
+    "Death": 0.5115795553108851
+  },
+  "purse": [
+    27.05,
+    6,
+    3
+  ],
+  "auction": {
+    "date": "16 Dec 2026",
+    "venue": "Goa",
+    "salary_cap_cr": 157.0
+  },
+  "squad_size": 19,
+  "overseas_in_squad": 5
+}

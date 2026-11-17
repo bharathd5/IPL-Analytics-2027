@@ -1,0 +1,317 @@
+{
+  "data_quality": {
+    "bbb_rows_raw": 200999,
+    "bbb_exact_duplicates_removed": 0,
+    "matches_rows_raw": 883,
+    "matches_exact_duplicates_removed": 0,
+    "comps_rows_raw": 141,
+    "comps_exact_duplicates_removed": 0,
+    "teams_rows_raw": 353,
+    "teams_exact_duplicates_removed": 0,
+    "mapping_rows_raw": 6413,
+    "mapping_exact_duplicates_removed": 0,
+    "xi_rows_raw": 28381,
+    "xi_exact_duplicates_removed": 0,
+    "bbb_key_duplicates_removed": 0,
+    "bbb_super_over_balls_removed": 38,
+    "bbb_bowl_speed_set_missing": 77864,
+    "xi_player_duplicates_removed": 40,
+    "validation": {
+      "balls_with_unknown_match": 0,
+      "matches_without_balls": 16,
+      "negative_runs": 0,
+      "runs_above_7": 0,
+      "wicket_without_type": 0,
+      "type_without_wicket": 0,
+      "batting_equals_bowling_team": 0,
+      "striker_name_conflicts": 0,
+      "bowler_name_conflicts": 0,
+      "overs_with_more_than_6_legal": 1
+    },
+    "master_rows": 200961,
+    "matches": 867,
+    "players": 958
+  },
+  "win_probability_model": {
+    "innings_1": {
+      "auc": 0.6835777655373545,
+      "brier": 0.22687005574345048,
+      "log_loss": 0.6564907018736085,
+      "balls": 103883
+    },
+    "innings_2": {
+      "auc": 0.8960320700171648,
+      "brier": 0.13118456050504967,
+      "log_loss": 0.40546985288625376,
+      "balls": 95146
+    }
+  },
+  "resource_model_training_balls": 101728,
+  "pressure_validation": {
+    "spearman": {
+      "bat_pi_vs_abs_wp_swing": 0.03175693418624185,
+      "bowl_pi_vs_abs_wp_swing": 0.1733178133442633,
+      "bat_pi_vs_bowl_pi": -0.19542246609131297
+    },
+    "incremental_auc": {
+      "striker_out": {
+        "auc_rrr_only": 0.5710734865890438,
+        "auc_rrr_plus_index": 0.573242171509179
+      },
+      "is_dot_bat": {
+        "auc_rrr_only": 0.4960342098295901,
+        "auc_rrr_plus_index": 0.49470337674023884
+      },
+      "is_boundary": {
+        "auc_rrr_only": 0.5120608110970895,
+        "auc_rrr_plus_index": 0.5329353456404574
+      },
+      "high_leverage_ball": {
+        "auc_rrr_only": 0.45357614568005034,
+        "auc_rrr_plus_index": 0.6877415661853742
+      }
+    },
+    "outcome_discrimination": {
+      "rrr_at_over_11": {
+        "train_accuracy": 0.784394250513347,
+        "holdout_accuracy": 0.8115501519756839,
+        "holdout_auc": 0.8959598577988446,
+        "train_matches": 487,
+        "holdout_matches": 329
+      },
+      "pressure_index": {
+        "train_accuracy": 0.8418891170431212,
+        "holdout_accuracy": 0.8601823708206687,
+        "holdout_auc": 0.8994963709080136,
+        "train_matches": 487,
+        "holdout_matches": 329
+      },
+      "both": {
+        "train_accuracy": 0.8624229979466119,
+        "holdout_accuracy": 0.8966565349544073,
+        "holdout_auc": 0.9398607613686862,
+        "train_matches": 487,
+        "holdout_matches": 329
+      }
+    },
+    "share_high_by_innings": {
+      "bat_pi": {
+        "1": 0.3561531113149905,
+        "2": 0.30097444190100175
+      },
+      "bowl_pi": {
+        "1": 0.4201386589991204,
+        "2": 0.229938887372157
+      }
+    }
+  },
+  "pressure_share": {
+    "bat_pressure_balls": 0.3487592119864053,
+    "bowl_pressure_balls": 0.34780380272789246
+  },
+  "counts": {
+    "matches": 867,
+    "deliveries": 200961,
+    "batters": 888,
+    "bowlers": 647,
+    "players": 958,
+    "eligible_batters": 112,
+    "eligible_bowlers": 105,
+    "sample_eligible_batters": 146,
+    "sample_eligible_bowlers": 132,
+    "excluded_pakistan_players": 68,
+    "knockout_matches": 31,
+    "dls_matches": 23
+  },
+  "config": {
+    "ACTIVE_YEAR": 2026,
+    "ASSOCIATE_TEAMS": [
+      "Afghanistan A",
+      "Pakistan A",
+      "Singapore",
+      "Canada",
+      "Kuwait",
+      "Scotland",
+      "Bangladesh A",
+      "Japan",
+      "Netherlands",
+      "Oman",
+      "United States Of America",
+      "Sri Lanka A",
+      "Hong Kong",
+      "India A",
+      "United Arab Emirates",
+      "Nepal"
+    ],
+    "BAT_IMPACT_RUNS": 20,
+    "BAT_MIN_PRESSURE_BALLS": 120,
+    "BAT_MIN_PRESSURE_BALLS_INNINGS": 3,
+    "BAT_MIN_PRESSURE_INNINGS": 12,
+    "BAT_PI_WEIGHTS": {
+      "difficulty": 0.25,
+      "rate": 0.15,
+      "wickets": 0.15,
+      "balls": 0.1,
+      "stage": 0.1,
+      "closeness": 0.15,
+      "partnership": 0.1
+    },
+    "BAT_QUAL_RUNS_SITUATION": 15,
+    "BAT_QUAL_RUNS_SR": [
+      10,
+      156
+    ],
+    "BAT_WEIGHTS": {
+      "consistency": 0.35,
+      "contribution": 0.2,
+      "delta": 0.15,
+      "wpa": 0.15,
+      "standout": 0.1,
+      "knockout": 0.05
+    },
+    "BOWLER_CHARGED_EXTRAS": [
+      "other",
+      "Overstep",
+      "wide"
+    ],
+    "BOWLER_WICKETS": [
+      "Bowled",
+      "Stump",
+      "Caught",
+      "Hit Wicket",
+      "LBW"
+    ],
+    "BOWL_IMPACT_WKTS": 2,
+    "BOWL_MIN_PRESSURE_BALLS": 150,
+    "BOWL_MIN_PRESSURE_BALLS_SPELL": 6,
+    "BOWL_MIN_PRESSURE_SPELLS": 12,
+    "BOWL_PI_WEIGHTS": {
+      "difficulty": 0.25,
+      "momentum": 0.15,
+      "wickets": 0.1,
+      "balls": 0.1,
+      "stage": 0.1,
+      "closeness": 0.2,
+      "partnership": 0.1
+    },
+    "BOWL_WEIGHTS": {
+      "consistency": 0.35,
+      "contribution": 0.2,
+      "delta": 0.15,
+      "wpa": 0.15,
+      "standout": 0.1,
+      "knockout": 0.05
+    },
+    "DEAD_GAME_FACTOR": 0.6,
+    "DEAD_GAME_WP": 0.03,
+    "DOT_THRESHOLD": 0.45,
+    "EXCLUDED_NATIONAL_TEAM_IDS": [
+      25,
+      341
+    ],
+    "ILLEGAL_EXTRAS": [
+      "other",
+      "Overstep",
+      "wide"
+    ],
+    "KNOCKOUT_INNINGS_WEIGHT": 1.5,
+    "KNOCKOUT_STAGES": [
+      "Semi Final",
+      "Final",
+      "Qualifier",
+      "Eliminator"
+    ],
+    "LEVELS": [
+      [
+        0,
+        34,
+        "Low"
+      ],
+      [
+        34,
+        67,
+        "Moderate"
+      ],
+      [
+        67,
+        90,
+        "High"
+      ],
+      [
+        90,
+        101,
+        "Extreme"
+      ]
+    ],
+    "N_BOOTSTRAP": 300,
+    "N_FOLDS": 5,
+    "PRESSURE_THRESHOLD": 67,
+    "PRIOR_BALLS": 80,
+    "PRIOR_INNINGS": 10,
+    "PRIOR_KO": 3,
+    "RANDOM_STATE": 42,
+    "SEMI_STAKES_STAGES": [
+      "Super 4"
+    ],
+    "SENSITIVITY_DOT": [
+      0.4,
+      0.45,
+      0.5
+    ],
+    "SENSITIVITY_THRESHOLDS": [
+      60,
+      67,
+      75
+    ],
+    "STAKES": {
+      "knockout": 1.2,
+      "super4": 1.08,
+      "dls": 1.05
+    },
+    "WEIGHT_SCENARIOS": {
+      "Base (report weights)": null,
+      "Equal weights": {
+        "consistency": 0.16666666666666666,
+        "contribution": 0.16666666666666666,
+        "delta": 0.16666666666666666,
+        "wpa": 0.16666666666666666,
+        "standout": 0.16666666666666666,
+        "knockout": 0.16666666666666666
+      },
+      "Consistency-heavy": {
+        "consistency": 0.5,
+        "contribution": 0.15,
+        "delta": 0.1,
+        "wpa": 0.1,
+        "standout": 0.1,
+        "knockout": 0.05
+      },
+      "Contribution-heavy": {
+        "consistency": 0.25,
+        "contribution": 0.3,
+        "delta": 0.15,
+        "wpa": 0.15,
+        "standout": 0.1,
+        "knockout": 0.05
+      },
+      "No WPA": {
+        "consistency": 0.4,
+        "contribution": 0.25,
+        "delta": 0.15,
+        "wpa": 0.0,
+        "standout": 0.15,
+        "knockout": 0.05
+      },
+      "No knockout": {
+        "consistency": 0.37,
+        "contribution": 0.21,
+        "delta": 0.16,
+        "wpa": 0.16,
+        "standout": 0.1,
+        "knockout": 0.0
+      }
+    }
+  },
+  "n_bootstrap": 300,
+  "generated": "2026-11-17 15:14"
+}
